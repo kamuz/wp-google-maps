@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: KMZ Google Maps
- * Description: Shortcode for display Google Map
+ * Description: Shortcode for display Google Map: [map center="city, region, country" width="600" height="300" zoom="13"]Description of the map[/map]
  * Author: Vladimir Kamuz
  * Author URI: https://wpdev.pp.ua
  * Plugin URL: https://github.com/kamuz/wp-google-maps
@@ -22,4 +22,8 @@ function kmz_google_map($attrs, $content){
         ),
         $attrs
     );
+
+    $map = $content;
+    $map .= 
+    return $map;
 }
