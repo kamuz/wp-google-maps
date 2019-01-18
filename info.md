@@ -1,3 +1,33 @@
 # Google карты для WordPress
 
 Создадим шорткод через `add_shortcode()` и при зададим необходимые параметры через `shortcode_attr()`.
+
+*wp-content/plugins/kmz-google-maps/kmz-google-maps.php*
+
+```php
+<?php
+/**
+ * Plugin Name: KMZ Google Maps
+ * Description: Shortcode for display Google Map
+ * Author: Vladimir Kamuz
+ * Author URI: https://wpdev.pp.ua
+ * Plugin URL: https://github.com/kamuz/wp-google-maps
+ * Licence: GPL2
+ * Text Domain: kmzgooglemaps
+ */
+
+add_shortcode('map', 'kmz_google_map');
+
+function kmz_google_map($attrs, $content){
+    $attrs = shortcode_attrs(
+        array(
+            'center' => 'Kiev, Ukraine',
+            'width' => 600,
+            'height' => 400,
+            'zoom' => 13,
+            'content' => !empty($content) ? "<h2>  $content </h2>" : "<h2>Google Map</h2>"
+        ),
+        $attrs
+    );
+}
+```

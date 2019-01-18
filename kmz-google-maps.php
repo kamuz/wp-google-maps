@@ -3,7 +3,10 @@
  * Plugin Name: KMZ Google Maps
  * Description: Shortcode for display Google Map
  * Author: Vladimir Kamuz
- * Plugin URL: https://wpdev.pp.ua
+ * Author URI: https://wpdev.pp.ua
+ * Plugin URL: https://github.com/kamuz/wp-google-maps
+ * Licence: GPL2
+ * Text Domain: kmzgooglemaps
  */
 
 add_shortcode('map', 'kmz_google_map');
