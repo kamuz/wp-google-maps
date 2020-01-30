@@ -1,4 +1,4 @@
-# Google карты для WordPress
+# Создание Wordpress плагина для добавления статической Google карты
 
 Мы реализуем плагин, который будет выводить статическую карту Google через шорткод WordPress. Документация [Maps Static API
 ](https://developers.google.com/maps/documentation/maps-static/).
@@ -68,7 +68,7 @@ function kmz_google_map($attrs, $content){
             'width' => 500,
             'height' => 400,
             'zoom' => 10,
-            'content' => !empty($content) ? "<h2>  $content </h2>" : "<h2>Google Map</h2>",
+            'content' => !empty($content) ? "<h2> $content </h2>" : "<h2>Google Map</h2>",
             'mlabel' => 'K',
             'mcolor' => 'green',
             'mlat' => '50.4513',
